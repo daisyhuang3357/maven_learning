@@ -7,9 +7,18 @@ import org.testng.annotations.Test;
 public class HelloWorldTest {
 
     @Test
-    public void testSayHello()
-    {
+    public void testSayHello() {
         HelloWorld helloWorld = new HelloWorld();
+
+        String result = helloWorld.sayHello(helloWorld.getName());
+
+        Assert.assertEquals( "Hello Maven", result );
+    }
+
+    private String name = "APPLE";
+    @Test
+    public void testSayHello(String name) {
+        HelloWorld helloWorld = new HelloWorld(name);
 
         String result = helloWorld.sayHello(helloWorld.getName());
 
