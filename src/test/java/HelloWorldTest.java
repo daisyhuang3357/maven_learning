@@ -22,6 +22,6 @@ public class HelloWorldTest {
 
         String result = helloWorld.sayHello(helloWorld.getName());
 
-        Assert.assertEquals( "Hello Maven", result );
+        Assert.assertEquals( "Hello " + name, result );
     }
 }
